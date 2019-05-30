@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Información películas</h1>
+
+    <form #formPelis="ngForm" (ngSubmit)="onSubmitPeli()">
+
+        <label>Nombre peli</label>
+        <input type="text" name="titulo" #titulo="ngModel" [(ngModel)]="title">
+        <button (click)="buscoPeliTitulo(title)" class="btn btn-primary btn-block">Buscar</button>
+    </form>
+    <div *ngIf="title">
+        <p>Título: {{result.Title}}</p>
+        <p>Año: {{result.Year}}</p>
+        <p>Director: {{result.Director}}</p>
+    </div>
+</div>

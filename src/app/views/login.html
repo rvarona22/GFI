@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Inicia sesión</h1>
+
+<form #formLogin="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+        <label>Nombre</label>
+        <input type="text" placeholder="Username" name="nombre" #nombre="ngModel" [(ngModel)]="login.nombre">
+    </p>
+    <p>
+        <label>Password</label>
+        <input type="password" placeholder="Password" name="pss" #pass="ngModel" [(ngModel)]="login.pass">
+    </p>
+    <button type="submit" value="login">Login</button>
+</form>
+</div>
